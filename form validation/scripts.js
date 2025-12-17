@@ -2,7 +2,7 @@ const Name = document.getElementById("name")
 const roll = document.getElementById("roll")
 const addr = document.getElementById("address")
 
-const button = document.getElementById("btn_submit")
+const button = document.querySelector("form")
 
 const transcript = document.querySelector(".details")
 
@@ -12,8 +12,9 @@ const showdata = document.querySelector(".show_data")
 
 const objlist = []
  
-button.addEventListener("click",(e)=>{
-    e.preventDefault()
+button.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    console.log(3);
     if (Number(roll.value) <0)
         alert("Invalid roll number entered. Please enter valid roll number.")
     else{
@@ -24,12 +25,18 @@ button.addEventListener("click",(e)=>{
         })
         LocalSave()
         UpdateTranscript()
+
        
     }
+
+    clearValue()
+
+
 })
 
 
 buttonOutput.addEventListener("click",(e)=>{
+    ClearOutput()
     e.preventDefault()
     ShowOutput()
 })
@@ -72,3 +79,13 @@ function ShowOutput(){
         </dl>
         `
 })}
+
+function ClearOutput(){
+    showdata.innerHTML = ""
+}
+
+function clearValue(){
+    Name.value = ""
+    roll.value = ""
+    addr.value = ""
+}
