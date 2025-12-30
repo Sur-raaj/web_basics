@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>Simple Arithmetic Application</header>
+    <section>
+    <div class="input_field">
+        <input type="number" id="num1" class="num_display" placeholder="First Number">
+        <input type="text" id="symbol" class="num_display" disabled placeholder="Operation">
+        <input type="number" id="num2" class="num_display" placeholder="Second Number">
+    </div>
+
+    <div class="operation">
+        <button id="add_btn" class="btn">Add</button>
+        <button id="subtract_btn" class="btn">Subtract</button>
+        <button id="multiply_btn" class="btn">Multiply</button>
+        <button id="divide_btn" class="btn">Divide</button>
+    </div>
+
+    <div class="result_field">
+        <button id="result_btn" class="btn">Show Result</button>
+        <input type="text" id="result" class="num_display" placeholder="Result" disabled>
+    </div>
+</section>
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+<script src="script.js" type="module"></script>
+
+</body>
+</html>
